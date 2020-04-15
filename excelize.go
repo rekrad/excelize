@@ -214,3 +214,10 @@ func (f *File) UpdateLinkedValue() error {
 	}
 	return nil
 }
+
+func (f *File) GetSheetNames() (sheetNames []string) {
+	for k, _ := range f.sheetMap {
+		sheetNames = append(sheetNames, k)
+	}
+	return sheetNames
+}
